@@ -1,3 +1,5 @@
+Criei essa Stack para trabalhar com multiplos projetos PHP no Docker, mas ele pode ser facilmente utilizado com projetos de qualquer linguagem.
+
 Para poder executar esse ambiente de desenvolvimento, você deve instalar previamente o docker e o docker-compose.
 
 - [Get Docker](https://docs.docker.com/get-docker/)
