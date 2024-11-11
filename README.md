@@ -56,8 +56,6 @@ O script start-dev.sh inicia a stack e configura o Dnsserver. Já o script init-
 
 ## Standard project docker-compose file
 ```yaml
-version: '3.2'
-
 services:
 
   app:
@@ -71,5 +69,16 @@ services:
 
 networks:
   default:
-    external:
-      name: dev-network
+    name: dev-network
+    external: true
+
+## WSL2 Configuration
+Após a atualização do WSL com melhorias para o compartilhamento de redes entre o Linux e Windows, tivemos algumas novas configurações para fazer
+essa stack funcionar corretamente. Adicionei ao projeto um arquivo (.wslconfig) que deve ser adicionadono ao diretório do seu usuário no windows (C:\Users\<NOME_USUARIO>).
+
+Além disso, devemos liberar o uso das portas necessárias, usando esse comando no Terminal do Windows:
+
+```console
+ New-NetFirewallRule -DisplayName "WSL2 Port Bridge" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 80,443,10000,3000,5000
+ ```
+      

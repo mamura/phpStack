@@ -1,0 +1,9 @@
+[wsl2]
+localhostForwarding=true
+networkingMode=mirrored
+firewall=false
+dnsTunneling=false
+autoProxy=false
+
+[experimental]
+ignoredPorts=53,80,8080

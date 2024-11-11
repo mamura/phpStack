@@ -1,5 +1,3 @@
-version: "3.3"
-
 services:
 
   dnsmasq:
@@ -33,5 +31,6 @@ services:
 
 networks:
   default:
-    external:
-      name: dev-network
+    name: dev-network
+    external: true
+      
